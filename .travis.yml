@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-threejs-gulp' ]; then cd .. && eval "mv $currentfolder generator-threejs-gulp" && cd generator-threejs-gulp; fi
